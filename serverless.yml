@@ -1,0 +1,29 @@
+org: ifrank2025
+app: ifm-app
+
+service: backend-nodejs
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: dev
+  region: us-east-1
+
+functions:
+  hello:
+    handler: dist/handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
+
+package:
+  individually: true
+  patterns:
+    - '!node_modules/**'
+    - '!.git/**'
+    - '!**/*.ts'
+    - 'dist/**'

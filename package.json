@@ -1,0 +1,36 @@
+{
+  "name": "backend-nodejs",
+  "version": "1.0.0",
+  "description": "Serverless backend lambda",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "deploy": "serverless deploy",
+    "dev": "serverless offline --debug",
+    "start": "ts-node handler.ts",
+    "prebuild": "rm -rf dist",
+    "postbuild": "cp package.json dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrankIsmael/backend-nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrankIsmael/backend-nodejs/issues"
+  },
+  "homepage": "https://github.com/FrankIsmael/backend-nodejs#readme",
+  "dependencies": {
+    "serverless": "^4.14.2"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.149",
+    "@types/node": "^22.15.3",
+    "serverless-offline": "^14.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
