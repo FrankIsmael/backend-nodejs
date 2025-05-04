@@ -3,8 +3,6 @@ app: ifm-app
 
 service: backend-nodejs
 
-plugins:
-  - serverless-offline
 
 provider:
   name: aws
@@ -12,13 +10,11 @@ provider:
   stage: dev
   region: us-east-1
 
-functions:
-  hello:
-    handler: dist/handler.hello
-    events:
-      - http:
-          path: hello
-          method: get
+functions: ${file(./src/serverless-config/dev/functions.yml)}
+
+
+plugins:
+  - serverless-offline
 
 package:
   individually: true
@@ -26,4 +22,4 @@ package:
     - '!node_modules/**'
     - '!.git/**'
     - '!**/*.ts'
-    - 'dist/**'
+    - '.build/**'

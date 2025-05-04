@@ -1,0 +1,6 @@
+hello:
+  handler: src/functions/hello/hello.lambdaHandler
+  events:
+    - http:
+        path: hello
+        method: get
