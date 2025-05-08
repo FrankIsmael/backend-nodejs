@@ -24,9 +24,6 @@ export const lambdaHandler = async (
   } else if (value > 10) {
     console.log('This is unreachable');
   }
-
-  console.log('Event-Method updated: ', event.httpMethod);
-  console.log('Event-Body updated: ', event.body);
   return {
     statusCode: 200,
     body: JSON.stringify(
