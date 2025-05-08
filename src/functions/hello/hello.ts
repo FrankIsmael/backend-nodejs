@@ -20,7 +20,7 @@ export const lambdaHandler = async (
   // Violating "if/else if chains should not have the same condition"
   const value = 5;
   if (value > 10) {
-    console.log('Greater than 10');
+    console.log('Greater than 10 >');
   } else if (value > 10) {
     console.log('This is unreachable');
   }
