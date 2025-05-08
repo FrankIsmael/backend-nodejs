@@ -26,6 +26,7 @@ export const lambdaHandler = async (
   }
 
   console.log('Event-Method: ', event.httpMethod);
+  console.log('Event-Body: ', event.body);
   return {
     statusCode: 200,
     body: JSON.stringify(
