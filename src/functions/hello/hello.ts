@@ -25,6 +25,7 @@ export const lambdaHandler = async (
     console.log('This is unreachable');
   }
 
+  console.log('Event-Method: ', event.httpMethod);
   return {
     statusCode: 200,
     body: JSON.stringify(
