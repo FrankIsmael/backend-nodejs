@@ -9,7 +9,7 @@ export const lambdaHandler = async (
   }
 
   // Violating "Array.prototype.sort() should use a compare function"
-  const unsafeSort = ['banana', 'apple', 'cherry', 'test'].sort();
+  const safeSort = ['banana', 'apple', 'cherry', 'orange'].sort((a, b) => a.localeCompare(b));
 
   // Violating "for...in loops should filter properties before acting on them"
   const obj = { a: 1, b: 2 };
