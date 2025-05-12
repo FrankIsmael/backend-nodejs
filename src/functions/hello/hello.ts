@@ -29,7 +29,7 @@ export const lambdaHandler = async (
     body: JSON.stringify(
       {
         message:
-          'Hello World from Serverless with TypeScript! By 🤖Ismael FcoM with 💚🚀💜💽 TEST',
+          'Hello World from Serverless with TypeScript! By 🤖Ismael FcoM with 💚🚀💜💽 Hi',
         input: event,
       },
       null,
